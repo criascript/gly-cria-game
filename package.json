@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "gly-cli build cria_game_gly.lua"
+  },
+  "devDependencies": {
+    "@gamely/gly-cli": "^0.0.18"
+  }
+}
