@@ -1,5 +1,5 @@
 <div align="center">
-<h1><a href="https://github.com/gamelly/gly-engine" target="_blank"><img src="https://raw.githubusercontent.com/gamelly/gly-engine/refs/heads/main/assets/icon80x80.png"/></a><br>Jogo do Cria<br><sup><sub>made with <a href="https://playground.gamely.com.br" target="_blank">Gly Engine</a></sub></sup></h1>
+<h1><a href="https://github.com/gamelly/gly-engine" target="_blank"><img src="https://raw.githubusercontent.com/gamelly/gly-engine/refs/heads/main/assets/icon80x80.png"/></a><br>Jogo do Cria<br><sup><sub>Monkey Runner<br/><sup><sub>made with <a href="https://playground.gamely.com.br" target="_blank">Gly Engine</a></sub></sup></sub></sup></h1>
 </div>
 
 ### How to Build
