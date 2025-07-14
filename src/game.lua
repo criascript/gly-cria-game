@@ -65,14 +65,14 @@ local function init(std, game)
         RUNNER = {
             speed = 2, 
             attack_type = "chase",
-            color = std.color.red or {r=255,g=0,b=0},
+            color = std.color.red,
             damage = 1,
             jump_force = -6 
         },
         JUMPER = {
             speed = 3,  
             attack_type = "jump",
-            color = std.color.green or {r=0,g=255,b=0},
+            color = std.color.green,
             damage = 2,
             jump_interval = 500,  
             jump_force = -10  
@@ -80,14 +80,14 @@ local function init(std, game)
         SHOOTER = {
             speed = 2,
             attack_type = "shoot",
-            color = std.color.purple or {r=128,g=0,b=128},
+            color = std.color.purple,
             damage = 1,
             shoot_interval = 200
         },
         BOSS = {
             speed = 2,
             attack_type = "multi",
-            color = std.color.black or {r=0,g=0,b=0},
+            color = std.color.black,
             damage = 3,
             attack_interval = 3000,
             health = 3
@@ -99,21 +99,21 @@ local function init(std, game)
             level = 1,
             y_offset = 60,
             width = "full",
-            color = std.color.green or {r=0,g=255,b=0}
+            color = std.color.green
         },
         {
             level = 2,
             y_offset = 160,   
             width = 150,      
             count = 3,
-            color = std.color.brown or {r=165,g=42,b=42}
+            color = std.color.brown
         },
         {
             level = 3,
             y_offset = 260,   
             width = 170,      
             count = 2,
-            color = std.color.gray or {r=128,g=128,b=128}
+            color = std.color.gray
         }
     }
     
@@ -734,9 +734,9 @@ local function draw_big_pixel_heart(std, x, y, filled)
     filled = not not filled
 
     if filled then
-        std.draw.color(std.color.red or {r=255, g=0, b=0})
+        std.draw.color(std.color.red)
     else
-        std.draw.color(std.color.dark_gray or {r=169, g=169, b=169})
+        std.draw.color(std.color.darkgray)
     end
 
     std.draw.rect(0, x + 2, y, 6, 4)
@@ -838,7 +838,7 @@ local function draw_pixel_letter(std, x, y, letter)
 
     if not letter_data then return end
     
-    std.draw.color(std.color.white or {r=255, g=255, b=255})
+    std.draw.color(std.color.white)
 
     local size = 4  
     for i = 1, #letter_data do
@@ -943,7 +943,7 @@ local function draw_pixel_digit(std, x, y, digit)
         return 
     end
 
-    std.draw.color(std.color.yellow or {r=255, g=255, b=0})
+    std.draw.color(std.color.yellow)
 
     local size = 4  
     for i = 1, #digit_data do
@@ -977,19 +977,19 @@ local function draw_hud(std, game)
     local width = tonumber(game.width) or 800
     width = math.max(width, 100)
 
-    std.draw.color(std.color.black or {r=0,g=0,b=0})
+    std.draw.color(std.color.black)
     std.draw.rect(0, 0, 0, width, 60)
 
-    std.draw.color(std.color.gray or {r=128,g=128,b=128})
+    std.draw.color(std.color.gray)
     std.draw.rect(0, 4, 4, width - 8, 52)
 
-    std.draw.color(std.color.dark_gray or {r=169,g=169,b=169})
+    std.draw.color(std.color.darkgray)
     std.draw.rect(0, 4, 4, width - 8, 3)
     std.draw.rect(0, 4, 53, width - 8, 3)
     std.draw.rect(0, 4, 4, 3, 52)
     std.draw.rect(0, width - 7, 4, 3, 52)
 
-    std.draw.color(std.color.black or {r=0,g=0,b=0})
+    std.draw.color(std.color.black)
     for i = 1, 3 do
         local x = (width / 4) * i
         std.draw.rect(0, x, 5, 2, 50)
